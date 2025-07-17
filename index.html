@@ -44,12 +44,13 @@
 </body>
 	<!-- Javascript -->
 <script>
-	let cam=document.querySelector('#mcamera');
-	let campost=cam.object3D.position;
-	let campost2=cam.getAttribute('position');
-	document.getElementsById("out1").innerHTML=campost2.x;
-	document.getElementsById("out2").innerHTML=campost2.y;
-	document.getElementsById("out3").innerHTML=campost2.z;
+	let cam1=document.querySelector('#mcamera');
+	let cam2=document.querySelector('#cameraview');
+	/*let campost=cam.object3D.position;*/
+	let campost2=cam2.getAttribute('position');
+	document.getElementsById("out1").innerHTML=0;
+	document.getElementsById("out2").innerHTML=1;
+	document.getElementsById("out3").innerHTML=2;
 	
 </script>
 </html>
