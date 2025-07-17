@@ -18,19 +18,19 @@
 	<a-asset-item id="glb_model1" src="casco.gltf"></a-asset-item>
   	</a-assets>
 	<!-- Models and primitive objects -->
-	<a-box position="-2 1 -2" rotation="0 45 0" color="#4CC3D9"></a-box>
-      	<a-sphere position="2 1 -2" radius="0.5" color="#EF2D5E"></a-sphere>
-      	<a-cylinder position="-2 1 2" radius="0.5" height="1" color="#FFC65D"></a-cylinder>
+	<a-box position="-2 0.5 -2" rotation="0 45 0" color="#4CC3D9"></a-box>
+      	<a-sphere position="2 0.5 -2" radius="0.5" color="#EF2D5E"></a-sphere>
+      	<a-cylinder position="-2 0.5 2" radius="0.5" height="1" color="#FFC65D"></a-cylinder>
       	<a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 1 2" rotation="0 0 0"></a-entity>	
+	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 0.5 2" rotation="0 0 0"></a-entity>	
 
 	<!-- Camera -->
 	      	<a-entity id="cameraview" position="0 3 10">
-		<a-camera id="camera"><a-cursor></a-cursor></a-camera>
+		<a-camera id="camera"><a-cursor>
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
             	position="0 0 5"
             	geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-           	material="color: red; shader: flat"></a-entity>
+           	material="color: red; shader: flat"></a-cursor></a-camera></a-entity>
 		</a-entity>
 	      	<!--<a-entity position="0 3 10">
 		<a-entity camera look-controls>
