@@ -50,7 +50,7 @@
 	let camp1=cam1.object3D.position;
 	let camp2=cam2.getAttribute('position');
 	AFRAME.registerComponent('a-camera',{
-	window.addEventListener("devicemotion", (event) => {
+	window.addEventListener("devicemotion",function() {
 		var accel=event.acceleration;
   // Process event.acceleration, event.accelerationIncludingGravity,
   // event.rotationRate and event.interval
