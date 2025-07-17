@@ -49,9 +49,24 @@
 	/*let campost=cam.object3D.position;*/
 	let camp1=cam1.object3D.position;
 	let camp2=cam2.getAttribute('position');
+	
+	window.addEventListener("devicemotion", (event) => {
+		var accel=event.acceleration;
+  // Process event.acceleration, event.accelerationIncludingGravity,
+  // event.rotationRate and event.interval
+});
+
+	/*window.addEventListener('devicemotion', function(){
+            var acc = event.acceleration;
+            this.el.object3D.position.x += acc.x*9.8;
+            this.el.object3D.position.y += acc.y*9.8;
+            this.el.object3D.position.z += acc.z*9.8;
+
+        }, true);
+  })*/
 	document.getElementsById("out1").innerHTML=camp1.z;
 	document.getElementsById("out2").innerHTML=camp2.z;
-	document.getElementsById("out3").innerHTML=0;
+	document.getElementsById("out3").innerHTML=accel.z;
 	
 </script>
 </html>
