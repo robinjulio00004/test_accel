@@ -45,7 +45,11 @@
 	<!-- Javascript -->
 <script>
 	let cam=document.querySelector('#cameraview');
-	const position=cam.object3D.position;
+	let campost=cam.object3D.position;
+
+	document.getElementsById("out1").innerHTML=campost.x;
+	document.getElementsById("out2").innerHTML=campost.y;
+	document.getElementsById("out3").innerHTML=campost.z;
 	
 </script>
 </html>
