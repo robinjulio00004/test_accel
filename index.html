@@ -28,7 +28,7 @@
 	      	<a-entity id="cameraview" position="0 0 20">
 		<a-camera id="mcamera">
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
-            	position="0 0 -6"
+            	position="0 0 -3"
             	geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
            	material="color: green; shader: flat"></a-entity>
 		</a-camera>
@@ -38,6 +38,8 @@
 </body>
 	<!-- Javascript -->
 <script>
+	let cam=document.querySelector('#cameraview');
+	const position=cam.object3D.position;
 	
 </script>
 </html>
