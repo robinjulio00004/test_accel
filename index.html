@@ -47,10 +47,11 @@
 	let cam1=document.querySelector('#mcamera');
 	let cam2=document.querySelector('#cameraview');
 	/*let campost=cam.object3D.position;*/
-	let campost2=cam2.getAttribute('position');
-	document.getElementsById("out1").innerHTML=0;
-	document.getElementsById("out2").innerHTML=1;
-	document.getElementsById("out3").innerHTML=2;
+	let camp1=cam1.object3D.position;
+	let camp2=cam2.getAttribute('position');
+	document.getElementsById("out1").innerHTML=camp1.z;
+	document.getElementsById("out2").innerHTML=camp2.z;
+	document.getElementsById("out3").innerHTML=0;
 	
 </script>
 </html>
