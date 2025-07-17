@@ -49,13 +49,15 @@
 	/*let campost=cam.object3D.position;*/
 	let camp1=cam1.object3D.position;
 	let camp2=cam2.getAttribute('position');
-	AFRAME.registerComponent('a-camera',{
+	
 	window.addEventListener("devicemotion",function() {
 		var accel=event.acceleration;
   // Process event.acceleration, event.accelerationIncludingGravity,
   // event.rotationRate and event.interval
+	document.getElementById("out1").innerHTML=camp1.z;
+	document.getElementById("out2").innerHTML=camp2.z;
+	document.getElementById("out3").innerHTML=accel.z;
 	},true);
-	})
 
 	/*window.addEventListener('devicemotion', function(){
             var acc = event.acceleration;
@@ -65,9 +67,7 @@
 
         }, true);
   })*/
-	document.getElementById("out1").innerHTML=camp1.z;
-	document.getElementById("out2").innerHTML=camp2.z;
-	document.getElementById("out3").innerHTML=accel.z;
+
 	
 </script>
 </html>
