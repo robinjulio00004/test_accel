@@ -46,10 +46,10 @@
 <script>
 	let cam=document.querySelector('#cameraview');
 	let campost=cam.object3D.position;
-
-	document.getElementsById("out1").innerHTML=campost.x;
-	document.getElementsById("out2").innerHTML=campost.y;
-	document.getElementsById("out3").innerHTML=campost.z;
+	let campost2=cam.getAttribute('position');
+	document.getElementsById("out1").innerHTML=campost2.x;
+	document.getElementsById("out2").innerHTML=campost2.y;
+	document.getElementsById("out3").innerHTML=campost2.z;
 	
 </script>
 </html>
