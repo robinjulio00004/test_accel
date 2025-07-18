@@ -46,6 +46,7 @@
 <script>
 	let m1=0, m2=0, m3=0, m4=0, m5=0, m6=0, M=0, Ay=0, W=0, flanco=0, pasos=0, contador=0, npost=0;
 	let cam=document.querySelector('#cameraview');
+	var worldPos = new THREE.Vector3();
 	/*let campost=cam.object3D.position;*/
 	/*let campost=cam.object3D.position;*/
 	let campost=cam.getAttribute('position');
@@ -85,9 +86,9 @@
 	/*cam.object3D.position.z-=pasos;*/
 	/*cam.setAttribute('mycomponent', 'position', '0 0 pasos')*/
 	/*cam.setAttribute('position', {x:0,y:0,z:pasos});*/
-	cam.object3D.position.set('0 0 pasos');
+	worldPos.setFromMatrixPosition(cam.object3D.matrixWorld);
 	document.getElementById("out1").innerHTML=campost.z;
-	document.getElementById("out2").innerHTML=0;
+	document.getElementById("out2").innerHTML=worldPos.z;
 	document.getElementById("out3").innerHTML=pasos;
 	});
 	
