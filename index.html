@@ -84,8 +84,8 @@
         pasos = parseInt(contador/2);
 	cam.object3D.position.z=vcamera-pasos;
 	document.getElementById("out1").innerHTML=pasos;
-	document.getElementById("out2").innerHTML=gyrox;
-	document.getElementById("out3").innerHTML=gyroy;
+	document.getElementById("out2").innerHTML=gyrox.toFixed(4);
+	document.getElementById("out3").innerHTML=gyroy.toFixed(4);
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
