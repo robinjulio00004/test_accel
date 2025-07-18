@@ -58,7 +58,7 @@
         {
             W = -2;
         }
-        else if (M < 0.45)
+        else if (M < 0.3)
         {
             W = 0;
         }
@@ -68,8 +68,8 @@
         }
         flanco = W;
         pasos = parseInt(contador / 2);
-	document.getElementById("out1").innerHTML=W;
-	document.getElementById("out2").innerHTML=M;
+	document.getElementById("out1").innerHTML=flanco;
+	document.getElementById("out2").innerHTML=pasos;
 	document.getElementById("out3").innerHTML=accely;
 	},true);
 	
