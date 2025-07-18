@@ -80,9 +80,9 @@
         }
         flanco = W;
         pasos = parseInt(contador/2);
-	npost=vcamera-pasos;
+	/*npost=vcamera-pasos;*/
 	/*cam.object3D.position.z=npost;*/
-	campost.z=npost;
+	campost.z-=pasos;
 	document.getElementById("out1").innerHTML=campost.z;
 	document.getElementById("out2").innerHTML=npost;
 	document.getElementById("out3").innerHTML=pasos;
