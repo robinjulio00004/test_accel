@@ -26,7 +26,7 @@
 		
   	</a-assets>
 	<!-- Models and primitive objects -->
-	<a-entity gltf-model="#glb_model2" scale="0.5 0.5 0.5" position="-2 0.5 -2" rotation="-90 0 0" animation-mixer="clip: *; timeScale:3;"></a-entity>
+	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="-2 0.5 -2" rotation="-90 0 0" animation-mixer="clip: *; timeScale:3;"></a-entity>
       	<a-sphere position="2 0.5 -2" radius="0.5" color="#EF2D5E"></a-sphere>
       	<a-cylinder position="-2 0.5 2" radius="0.5" height="1" color="#FFC65D"></a-cylinder>
       	<a-plane position="0 0 0" rotation="-90 0 0" width="6" height="6" color="#FFFFFF"></a-plane>
@@ -53,8 +53,10 @@
 	
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
-	var gyroy=event.rotationRate.gamma;
+	
 	var gyrox=event.rotationRate.alpha;
+	var gyroy=event.rotationRate.beta;
+	var gyroz=event.rotationRate.gamma;
 		Ay = accely;
 		m1 = Ay;
 		m2 = m1;
@@ -85,9 +87,9 @@
         flanco = W;
         pasos = parseInt(contador/2);
 	cam.object3D.position.z=vcamera-pasos;
-	document.getElementById("out1").innerHTML=pasos;
-	document.getElementById("out2").innerHTML=gyrox.toFixed(4);
-	document.getElementById("out3").innerHTML=gyroy.toFixed(4);
+	document.getElementById("out1").innerHTML=gyrox.toFixed(4);
+	document.getElementById("out2").innerHTML=gyroy.toFixed(4);
+	document.getElementById("out3").innerHTML=gyroz.toFixed(4);
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
