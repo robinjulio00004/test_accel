@@ -49,7 +49,7 @@
 	let campost=cam.object3D.position;
 	/*let campost=cam.getAttribute('position');*/
 	
-	AFRAME.registerComponent('a-camera',{
+	
 	window.addEventListener("devicemotion", (event) => {
 		var accel=event.acceleration;
   // Process event.acceleration, event.accelerationIncludingGravity,
@@ -58,7 +58,7 @@
 	document.getElementById("out2").innerHTML=accel.y;
 	document.getElementById("out3").innerHTML=accel.z;
 	},true);
-	})
+	
 	/*window.addEventListener('devicemotion', function(){
             var acc = event.acceleration;
             this.el.object3D.position.x += acc.x*9.8;
