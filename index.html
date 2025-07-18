@@ -64,20 +64,15 @@
 	if (M < -1.15)
         {
 	setTimeout(()=>{},250);/*retardo de 250ms*/
-            W = -1;
+            W = 0;
 	setTimeout(()=>{},250);/*retardo de 250ms*/
         }
         else if(M > -0.75)
         { 
 	setTimeout(()=>{},250);/*retardo de 250ms*/
-            W = 0;
+            W = -1;
 	setTimeout(()=>{},250);/*retardo de 250ms*/
         }
-	/*else (M =<-0.75)
-	{
-	/*setTimeout(()=>{},250);/*retardo de 250ms*/
-	    /*W=-1;
-	}*/
         if(flanco!=W)
         {
             contador++;
