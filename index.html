@@ -32,7 +32,7 @@
 
 	<!-- Camera -->
 	      	<a-entity id="cameraview" position="0 0 20">
-		<a-camera id="mcamera" look-controls>
+		<a-camera>
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
             	position="0 0 -3"
             	geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -44,21 +44,21 @@
 </body>
 	<!-- Javascript -->
 <script>
-	let cam1=document.querySelector('#mcamera');
-	let cam2=document.querySelector('#cameraview');
+	let cam=document.querySelector('#cameraview');
 	/*let campost=cam.object3D.position;*/
-	let camp1=cam1.object3D.position;
-	let camp2=cam2.getAttribute('position');
+	let campost=cam1.object3D.position;
+	/*let camp2=cam1.getAttribute('position');*/
 	
-	window.addEventListener("devicemotion",function() {
+	AFRAME.registerComponent('a-camera',{
+	window.addEventListener("devicemotion", (event) => {
 		var accel=event.acceleration;
   // Process event.acceleration, event.accelerationIncludingGravity,
   // event.rotationRate and event.interval
-	document.getElementById("out1").innerHTML=camp1.z;
-	document.getElementById("out2").innerHTML=camp2.z;
+	document.getElementById("out1").innerHTML=campost.z;
+	document.getElementById("out2").innerHTML=accel.y;
 	document.getElementById("out3").innerHTML=accel.z;
 	},true);
-
+	})
 	/*window.addEventListener('devicemotion', function(){
             var acc = event.acceleration;
             this.el.object3D.position.x += acc.x*9.8;
