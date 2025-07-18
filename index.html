@@ -61,11 +61,11 @@
 		m6 = m5; 
 	M = (m1 / 6) + (m2 / 6) + (m3 / 6) + (m4 / 6) + (m5 / 6) + (m6 / 6);/*promediador*/
 	M=M-1.0;/*offset*/
-	if (M < -1.15 || M > -0.75)
+	if (M < -1.15 && M > -0.75)
         {
             W = 0;
         }
-        else if (M >= -1.15)
+        /*else if (M >= -1.15)
         { 
 	
             W = 1;
@@ -73,7 +73,7 @@
 	else (M =<-0.75)
 	{
 	/*setTimeout(()=>{},250);/*retardo de 250ms*/
-	    W=-1;
+	    /*W=-1;
 	}
         /*if(flanco!=W)
         {
