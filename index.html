@@ -59,13 +59,13 @@
 		m4 = m3;
 		m5 = m4;
 		m6 = m5; 
-	M = (m1 / 6) + (m2 / 6) + (m3 / 6) + (m4 / 6) + (m5 / 6) + (m6 / 6);
+	M = (m1 / 6) + (m2 / 6) + (m3 / 6) + (m4 / 6) + (m5 / 6) + (m6 / 6);/*promediador*/
 	M=M-1.0;/*offset*/
 	if (M < -1.15)
         {
             W = -2;
         }
-        else if (M > -0.90)
+        else if (M > -0.85)
         {
             W = 0;
         }
@@ -76,7 +76,7 @@
         flanco = W;
         pasos = parseInt(contador/2);
 	document.getElementById("out1").innerHTML=flanco;
-	document.getElementById("out2").innerHTML=W.toFixed(4);
+	document.getElementById("out2").innerHTML=contador;
 	document.getElementById("out3").innerHTML=M.toFixed(4);
 	},true);
 	
