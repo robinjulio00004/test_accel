@@ -51,7 +51,8 @@
 	
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
-	var gyroy=event.rotationRate.y;
+	var gyroy=event.rotationRate.gamma;
+	var gyrox=event.rotationRate.alpha;
 		Ay = accely;
 		m1 = Ay;
 		m2 = m1;
@@ -83,7 +84,7 @@
         pasos = parseInt(contador/2);
 	cam.object3D.position.z=vcamera-pasos;
 	document.getElementById("out1").innerHTML=pasos;
-	document.getElementById("out2").innerHTML=0;
+	document.getElementById("out2").innerHTML=gyrox;
 	document.getElementById("out3").innerHTML=gyroy;
 	});
 	
