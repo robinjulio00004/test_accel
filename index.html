@@ -61,11 +61,11 @@
 		m6 = m5; 
 	M = (m1 / 6) + (m2 / 6) + (m3 / 6) + (m4 / 6) + (m5 / 6) + (m6 / 6);/*promediador*/
 	M=M-1.0;/*offset*/
-	if (M < -0.75)
+	if (M < -1.15)
         {
             W = -2;
         }
-        else if(M > -1.15)
+        else if(M > -0.75)
         { 
             W = 0;
         }
@@ -73,15 +73,15 @@
 	{
 	/*setTimeout(()=>{},250);/*retardo de 250ms*/
 	    /*W=-1;
-	}
-        /*if(flanco!=W)
+	}*/
+        if(flanco!=W)
         {
             contador++;
         }
         flanco = W;
         /*pasos = parseInt(contador/2);*/
-	document.getElementById("out1").innerHTML=W;
-	document.getElementById("out2").innerHTML=0;
+	document.getElementById("out1").innerHTML=flanco;
+	document.getElementById("out2").innerHTML=contador++;
 	document.getElementById("out3").innerHTML=M.toFixed(4);
 	},true);
 	
