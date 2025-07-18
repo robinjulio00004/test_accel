@@ -61,7 +61,7 @@
 		m6 = m5; 
 	M = (m1 / 6) + (m2 / 6) + (m3 / 6) + (m4 / 6) + (m5 / 6) + (m6 / 6);/*promediador*/
 	M=M-1.0;/*offset*/
-	if (M < -1.25)
+	if (M < -1.3)
         {
 	setTimeout(()=>{},250);/*retardo de 250ms*/
             W = 0;
@@ -75,7 +75,9 @@
         }
         if(flanco!=W)
         {
+	setTimeout(()=>{},250);/*retardo de 250ms*/
             contador++;
+	setTimeout(()=>{},250);/*retardo de 250ms*/
         }
         flanco = W;
         pasos = parseInt(contador/2);
