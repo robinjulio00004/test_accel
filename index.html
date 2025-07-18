@@ -87,7 +87,8 @@
 	/*cam.setAttribute('mycomponent', 'position', '0 0 pasos')*/
 	/*cam.setAttribute('position', {x:0,y:0,z:pasos});*/
 		worldPos.z=pasos;
-		worldPos.applyMatrix4( cam.object3D.matrixWorld );
+		worldPos.applyMatrix4( cam.object3D.position );
+		/*worldPos.applyMatrix4( cam.object3D.matrixWorld );
 	/*worldPos.setFromMatrixPosition(cam.object3D.matrixWorld);*/
 	document.getElementById("out1").innerHTML=campost.z;
 	document.getElementById("out2").innerHTML=worldPos.z;
