@@ -50,7 +50,7 @@
 	/*let campost=cam.object3D.position;*/
 	let campost=cam.getAttribute('position');
 
-	window.addEventListener("devicemotion", function() {
+	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
 		Ay = accely;
 		m1 = Ay;
@@ -84,14 +84,14 @@
 	document.getElementById("out1").innerHTML=flanco;
 	document.getElementById("out2").innerHTML=contador;
 	document.getElementById("out3").innerHTML=pasos;
-	},true);
+	});
 	
-	/*window.addEventListener('devicemotion', (event)=>{
+	/*window.addEventListener('devicemotion', function(){
             var acc = event.acceleration;
             this.el.object3D.position.x += acc.x*9.8;
             this.el.object3D.position.y += acc.y*9.8;
             this.el.object3D.position.z += acc.z*9.8;
 
-        });*/	
+        },true);*/	
 </script>
 </html>
