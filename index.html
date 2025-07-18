@@ -82,7 +82,8 @@
         flanco = W;
         pasos = parseInt(contador/2);
 	/*npost=campost.z-pasos;*/
-	cam.object3D.position.z-=pasos;
+	/*cam.object3D.position.z-=pasos;*/
+	cam.setAttribute('mycomponent', 'position', '0 0 pasos')
 	document.getElementById("out1").innerHTML=campost.z;
 	document.getElementById("out2").innerHTML=0;
 	document.getElementById("out3").innerHTML=pasos;
