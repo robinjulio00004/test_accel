@@ -89,7 +89,7 @@
 		/*worldPos.setFromMatrixPosition(cam.object3D.matrixWorld);*/
 		/*worldPos.z=pasos;*/
 		/*worldPos.updateMatrixWorld ();*/
-		worldPos.applyMatrix4( cam.object3D.matrixWorld );
+		worldPos.applyMatrix4( cam.object3D.position );
 		/*worldPos.applyMatrix4( cam.object3D.matrixWorld );*/
 	document.getElementById("out1").innerHTML=campost.z;
 	document.getElementById("out2").innerHTML=worldPos.z;
