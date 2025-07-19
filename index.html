@@ -82,31 +82,27 @@
         }
         if(flanco!=W)
         {
-	setTimeout(()=>{},50);/*retardo de 350ms*/
+	setTimeout(()=>{},150);/*retardo de 350ms*/
 	var accelz=event.acceleration.z;
-	setTimeout(()=>{},50);/*retardo de 350ms*/
-		if(accelz > -0.75 )
+	setTimeout(()=>{},150);/*retardo de 350ms*/
+		if(accelz > -0.45 )
 		{
-		setTimeout(()=>{},150);/*retardo de 350ms*/
 			flancoz1=true;
+		}
 		setTimeout(()=>{},150);/*retardo de 350ms*/
-		}
-		else if(accelz > 0.75 )
+		if(accelz > 0.45 )
 		{
-			setTimeout(()=>{},150);/*retardo de 350ms*/
 			flancoz2=true;
-			setTimeout(()=>{},150);/*retardo de 350ms*/
 		}
+		setTimeout(()=>{},150);/*retardo de 350ms*/
 		if(flanco1=== true && flanco2 === true)
 		{
-			setTimeout(()=>{},350);/*retardo de 350ms*/
             		contador++;
-			setTimeout(()=>{},350);/*retardo de 350ms*/
 		}
 			contador--;
 			flanco1=false;
 			flanco2=false;
-
+		setTimeout(()=>{},50);/*retardo de 350ms*/
         }
         flanco = W;
         pasos = parseInt(contador/2);
@@ -114,7 +110,7 @@
 	/*cam.object3D.position.z=vcamera+ppasos;*/
 	document.getElementById("out1").innerHTML=flancoz1;
 	document.getElementById("out2").innerHTML=flancoz2;
-	document.getElementById("out3").innerHTML=pasos;
+	document.getElementById("out3").innerHTML=accelz.toFixed(4);
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
