@@ -112,13 +112,13 @@ if(Z >= 0.45)/*accelz*/
 	document.getElementById("out4").innerHTML=resta;
 
 		/**********************************************/
-        if(flancoy!=W && resta>5)/*en iPhone se invierte adelante y atrás*/	
+        if(flancoy!=W && mar1>mar2)/*en iPhone se invierte adelante y atrás*/	
         {
 	setTimeout(()=>{},50);/*retardo de 350ms*/
 	contador++;
 	setTimeout(()=>{},50);/*retardo de 350ms*/
         }
-	else if(flancoy!=W && resta<-5)
+	else if(flancoy!=W && mar1<mar2)
 	{
 	setTimeout(()=>{},50);/*retardo de 350ms*/
 	contador--;
