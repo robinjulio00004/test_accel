@@ -91,6 +91,18 @@
             W = -1;
 	setTimeout(()=>{},250);/*retardo de 250ms*/
         }
+		
+        if(flanco!=W)
+        {
+	setTimeout(()=>{},350);/*retardo de 350ms*/
+	contador++;
+	setTimeout(()=>{},350);/*retardo de 350ms*/
+        }
+        flanco = W;
+        pasos = parseInt(contador/2);
+	/*cam.object3D.position.z=vcamera+ppasos;*/
+	document.getElementById("out3").innerHTML=pasos;
+		
 	if(Z > -0.85)/*accelz*/
 	{
 	setTimeout(()=>{},50);/*retardo de 350ms*/
@@ -107,20 +119,9 @@
 		flancoz1=false;
 		flancoz2=false;
 	}
-
-        if(flanco!=Y)
-        {
-	setTimeout(()=>{},150);/*retardo de 350ms*/
-	contador++;
-	setTimeout(()=>{},150);/*retardo de 350ms*/
-        }
-        flanco = Y;
-        pasos = parseInt(contador/2);
-
-	/*cam.object3D.position.z=vcamera+ppasos;*/
+		
 	document.getElementById("out1").innerHTML=flancoz1;
 	document.getElementById("out2").innerHTML=flancoz2;
-	document.getElementById("out3").innerHTML=pasos;
 	document.getElementById("out4").innerHTML=Z;
 	});
 	
