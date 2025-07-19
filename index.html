@@ -119,13 +119,13 @@
 		marca2=ctiempo;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
-		/*if(marca2<marca1)*//*en iPhone se invierte adelante y atrás*/
-		resta=marca1-marca2;
 		if(marca1>4000 || marca2>4000)
 		{
 			marca1=0;
 			marca2=0;
 		}
+		/*if(marca2<marca1)*//*en iPhone se invierte adelante y atrás*/
+		resta=marca1-marca2;
 	
 	document.getElementById("out1").innerHTML=marca1;
 	document.getElementById("out2").innerHTML=marca2;
