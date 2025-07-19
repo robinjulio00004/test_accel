@@ -98,16 +98,18 @@
 	contador++;
 	setTimeout(()=>{},350);/*retardo de 350ms*/
         }
+	flancoy = W;
+        pasos = parseInt(contador/2);
+	/*cam.object3D.position.z=vcamera+ppasos;*/
+	document.getElementById("out3").innerHTML=pasos;
+		
 	/*else
 	{
 	setTimeout(()=>{},350);/*retardo de 350ms*/
 	/*contador--;	
 	setTimeout(()=>{},350);/*retardo de 350ms*/
 	}*/
-        flancoy = W;
-        pasos = parseInt(contador/2);
-	/*cam.object3D.position.z=vcamera+ppasos;*/
-	document.getElementById("out3").innerHTML=pasos;
+
 
 	/*if(Z < 0.45  && Z > -0.45)/*accelz
 	{
