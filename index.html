@@ -110,12 +110,14 @@
 	else if(Z >= 0.45)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
+		mar1=0;
 		mar1=ctiempo;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
 	else if(Z<=-0.45)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
+		mar2=0;
 		mar2=ctiempo;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
@@ -126,7 +128,6 @@
 	document.getElementById("out1").innerHTML=mar1;
 	document.getElementById("out2").innerHTML=mar2;
 	document.getElementById("out4").innerHTML=resta;
-		mar1=0,mar2=0;
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
