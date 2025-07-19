@@ -102,21 +102,16 @@
 	/*cam.object3D.position.z=vcamera+ppasos;*/
 	document.getElementById("out3").innerHTML=pasos;
 		
-	if(Z > -0.45)/*accelz*/
+	if(Z < 0.45)/*accelz*/
 	{
-	setTimeout(()=>{},50);/*retardo de 350ms*/
-	if(Z > -0.55)
+		flancoz1=false;
+	}
+	else if(Z > 0.85)
 	{
 		flancoz1=true;
 	}
-	setTimeout(()=>{},50);/*retardo de 350ms*/
-	if(Z <= -0.80 )
-	{
-		flancoz2=true;
-	}
-	setTimeout(()=>{},50);/*retardo de 350ms*/
-		J=flancoz1;
-		K=flancoz2;
+		/*J=flancoz1;
+		K=flancoz2;*/
 	}
 		
 	document.getElementById("out1").innerHTML=flancoz1;
