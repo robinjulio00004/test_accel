@@ -47,7 +47,7 @@
 </body>
 	<!-- Javascript -->
 <script>
-	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0, npost=0;
+	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0, npost=0,ctiempo=0,c1=0,c2=0,resta;
 	let z1=0, z2=0, z3=0, z4=0, z5=0, z6=0, Z=0, Az=0, X=0, flancoz=0, adelante=false, atras=false;
 	let marca1,marca2;
 	const vcamera=20;
@@ -58,7 +58,7 @@
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
 	var accelz=event.acceleration.z;
-	
+	ctiempo++;
 	/*var gyrox=event.rotationRate.alpha;
 	var gyroy=event.rotationRate.beta;
 	var gyroz=event.rotationRate.gamma;*/
@@ -112,6 +112,7 @@
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		A=1;
 		marca1=Date.now();
+		c1=ctiempo;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
 	else if(Z<=-0.45)
@@ -119,6 +120,7 @@
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		B=-1;
 		marca2=Date.now();
+		c2=ctiempo;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
 		if(marca2.valueOf() > marca1.valueOf())
@@ -131,10 +133,11 @@
 			atras=true;
 			adelante=false;
 		}
+		resta=c1-c2;
 	
-	document.getElementById("out1").innerHTML=adelante;
-	document.getElementById("out2").innerHTML=atras;
-	document.getElementById("out4").innerHTML=Z.toFixed(4);
+	document.getElementById("out1").innerHTML=c1;
+	document.getElementById("out2").innerHTML=c2;
+	document.getElementById("out4").innerHTML=resta;
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
