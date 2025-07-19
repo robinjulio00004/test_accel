@@ -47,10 +47,9 @@
 </body>
 	<!-- Javascript -->
 <script>
-	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flanco=0, pasos=0, contador=0, npost=0;
-	let z1=0, z2=0, z3=0, z4=0, z5=0, z6=0, Z=0, Az=0;
+	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0, npost=0;
+	let z1=0, z2=0, z3=0, z4=0, z5=0, z6=0, Z=0, Az=0,flancoz=0, flancoz1=false, flancoz2=false, J=false,K=false;
 	const vcamera=20;
-	let flancoz1=false, flancoz2=false;
 	let cam=document.querySelector('#cameraview');
 	let camrot=cam.object3D.rotation;
 	let campost=cam.object3D.position;
@@ -92,13 +91,13 @@
 	setTimeout(()=>{},250);/*retardo de 250ms*/
         }
 		
-        if(flanco!=W)
+        if(flancoy!=W)
         {
 	setTimeout(()=>{},350);/*retardo de 350ms*/
 	contador++;
 	setTimeout(()=>{},350);/*retardo de 350ms*/
         }
-        flanco = W;
+        flancoy = W;
         pasos = parseInt(contador/2);
 	/*cam.object3D.position.z=vcamera+ppasos;*/
 	document.getElementById("out3").innerHTML=pasos;
@@ -116,8 +115,8 @@
 		flancoz2=true;
 	}
 	setTimeout(()=>{},50);/*retardo de 350ms*/
-		flancoz1=false;
-		flancoz2=false;
+		J=flancoz1;
+		K=flancoz2;
 	}
 		
 	document.getElementById("out1").innerHTML=flancoz1;
