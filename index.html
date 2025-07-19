@@ -57,7 +57,7 @@
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
 	var accelz=event.acceleration.z;
-	let ctiempo=0,marca1=0,marca2=0;
+	var ctiempo=0, marca1,marca2;
 	ctiempo++;
 	/*var gyrox=event.rotationRate.alpha;
 	var gyroy=event.rotationRate.beta;
@@ -125,6 +125,7 @@
 	document.getElementById("out1").innerHTML=marca1;
 	document.getElementById("out2").innerHTML=marca2;
 	document.getElementById("out4").innerHTML=resta;
+	marca1=0,marca2=0;
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
