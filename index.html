@@ -79,37 +79,40 @@
 		z5 = z4;
 		z6 = z5; 
 	Z = (z1 / 6) + (z2 / 6) + (z3 / 6) + (z4 / 6) + (z5 / 6) + (z6 / 6);/*promediador z*/
-	if (Y < -1.33)
+	if (Y < -1.33)/*accely*/
         {
-	setTimeout(()=>{},50);/*retardo de 250ms*/
+	setTimeout(()=>{},250);/*retardo de 250ms*/
             W = 0;
-	setTimeout(()=>{},50);/*retardo de 250ms*/
+	setTimeout(()=>{},250);/*retardo de 250ms*/
         }
         else if(Y > -0.75)
         { 
-	setTimeout(()=>{},50);/*retardo de 250ms*/
+	setTimeout(()=>{},250);/*retardo de 250ms*/
             W = -1;
-	setTimeout(()=>{},50);/*retardo de 250ms*/
+	setTimeout(()=>{},250);/*retardo de 250ms*/
         }
+	if(Z > -0.85)/*accelz*/
+	{
+	setTimeout(()=>{},50);/*retardo de 350ms*/
+	if(Z > -0.95)
+	{
+		flancoz1=true;
+	}
+	setTimeout(()=>{},50);/*retardo de 350ms*/
+	if(Z <= -1.0 )
+	{
+		flancoz2=true;
+	}
+	setTimeout(()=>{},50);/*retardo de 350ms*/
+		flancoz1=false;
+		flancoz2=false;
+	}
+
         if(flanco!=Y)
         {
-		if(Z > -0.85)
-		{
-		setTimeout(()=>{},50);/*retardo de 350ms*/
-		if(Z > -0.95)
-		{
-			flancoz1=true;
-		}
-		setTimeout(()=>{},50);/*retardo de 350ms*/
-		if(Z <= -1.0 )
-		{
-			flancoz2=true;
-		}
-		setTimeout(()=>{},50);/*retardo de 350ms*/
-		contador++;
-			flancoz1=false;
-			flancoz2=false;
-		}
+	setTimeout(()=>{},150);/*retardo de 350ms*/
+	contador++;
+	setTimeout(()=>{},150);/*retardo de 350ms*/
         }
         flanco = Y;
         pasos = parseInt(contador/2);
