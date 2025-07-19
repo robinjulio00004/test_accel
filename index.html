@@ -109,25 +109,24 @@
 	}
 	else if(Z >= 0.45)
 	{
+		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar1=ctiempo;
+		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
 	else if(Z<=-0.45)
 	{
+		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar2=ctiempo;
-		/*setTimeout(()=>{},50);/*retardo de 250ms*/
+		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
-		/*if(marca1>4000 || marca2>4000)
-		{
-			marca1=0;
-			marca2=0;
-		}
-		/*if(marca2<marca1)*//*en iPhone se invierte adelante y atrás*/
 		resta=mar1-mar2;
+		/*if(mar2<mar1)*//*en iPhone se invierte adelante y atrás*/
+		
 	
 	document.getElementById("out1").innerHTML=mar1;
 	document.getElementById("out2").innerHTML=mar2;
 	document.getElementById("out4").innerHTML=resta;
-		/*mar1=0,mar2=0;*/
+		mar1=0,mar2=0;
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
