@@ -119,13 +119,13 @@
 	setTimeout(()=>{},50);/*retardo de 50ms*/
 	resta=mar1-mar2;
 	setTimeout(()=>{},50);/*retardo de 50ms*/
-		if(resta>0)
+		if(resta>33)
 		{
 		A=1;
 		}
-		else
+		else if (resta<-33)
 		{
-		A=0;
+		A=-1;
 		}
 	document.getElementById("out1").innerHTML=mar1;
 	document.getElementById("out2").innerHTML=A;
