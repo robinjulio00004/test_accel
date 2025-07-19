@@ -114,15 +114,15 @@ if(Z >= 0.45)/*accelz*/
 		/**********************************************/
         if(flancoy!=W && mar1>mar2)/*en iPhone se invierte adelante y atrás*/	
         {
-	setTimeout(()=>{},50);/*retardo de 350ms*/
+	setTimeout(()=>{},250);/*retardo de 350ms*/
 	contador++;
-	setTimeout(()=>{},50);/*retardo de 350ms*/
+	setTimeout(()=>{},250);/*retardo de 350ms*/
         }
 	else if(flancoy!=W && mar1<mar2)
 	{
-	setTimeout(()=>{},50);/*retardo de 350ms*/
+	setTimeout(()=>{},250);/*retardo de 350ms*/
 	contador--;
-	setTimeout(()=>{},50);/*retardo de 350ms*/	
+	setTimeout(()=>{},250);/*retardo de 350ms*/	
 	}
 	flancoy = W;
         pasos = parseInt(contador/2);
