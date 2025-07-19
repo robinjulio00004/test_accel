@@ -91,6 +91,23 @@
             W = -1;
 	setTimeout(()=>{},250);/*retardo de 250ms*/
         }
+		
+        if(flancoy!=W && resta>0)/*en iPhone se invierte adelante y atrás*/	
+        {
+	setTimeout(()=>{},350);/*retardo de 350ms*/
+	contador++;
+	setTimeout(()=>{},350);/*retardo de 350ms*/
+        }
+	/*else
+	{
+	setTimeout(()=>{},350);/*retardo de 350ms*/
+	/*contador--;	
+	setTimeout(()=>{},350);/*retardo de 350ms*/
+	}*/
+        flancoy = W;
+        pasos = parseInt(contador/2);
+	/*cam.object3D.position.z=vcamera+ppasos;*/
+	document.getElementById("out3").innerHTML=pasos;
 
 	/*if(Z < 0.45  && Z > -0.45)/*accelz
 	{
@@ -110,26 +127,9 @@
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
 	resta=mar1-mar2;
-		
-        if(flancoy!=W && resta>0)/*en iPhone se invierte adelante y atrás*/	
-        {
-	setTimeout(()=>{},350);/*retardo de 350ms*/
-	contador++;
-	setTimeout(()=>{},350);/*retardo de 350ms*/
-        }
-	else
-	{
-	setTimeout(()=>{},350);/*retardo de 350ms*/
-	contador--;	
-	setTimeout(()=>{},350);/*retardo de 350ms*/
-	}
-        flancoy = W;
-        pasos = parseInt(contador/2);
-	/*cam.object3D.position.z=vcamera+ppasos;*/
 	
 	document.getElementById("out1").innerHTML=campost.z;
 	document.getElementById("out2").innerHTML=contador;
-	document.getElementById("out3").innerHTML=pasos;
 	document.getElementById("out4").innerHTML=resta;
 	});
 	
