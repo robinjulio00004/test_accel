@@ -17,6 +17,7 @@
  	 <div id="out1"></div>
 	 <div id="out2"></div>
 	 <div id="out3"></div>
+	<div id="out4"></div>
 	</div>
 	<!-- Scene -->
       <a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
@@ -113,8 +114,9 @@
 
 	/*cam.object3D.position.z=vcamera+ppasos;*/
 	document.getElementById("out1").innerHTML=flancoz1;
-	document.getElementById("out2").innerHTML=pasos;
-	document.getElementById("out3").innerHTML=accelz.toFixed(4);
+	document.getElementById("out2").innerHTML=flancoz2;
+	document.getElementById("out3").innerHTML=pasos;
+	document.getElementById("out4").innerHTML=accelz.toFixed(4);
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
