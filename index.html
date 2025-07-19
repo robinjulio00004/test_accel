@@ -55,7 +55,7 @@
 	
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
-	var accelz=event.acceleration.z;
+	
 	
 	var gyrox=event.rotationRate.alpha;
 	var gyroy=event.rotationRate.beta;
@@ -71,35 +71,34 @@
 	M=M-1.0;/*offset*/
 	if (M < -1.33)
         {
-	setTimeout(()=>{},250);/*retardo de 250ms*/
+	setTimeout(()=>{},150);/*retardo de 250ms*/
             W = 0;
-	setTimeout(()=>{},250);/*retardo de 250ms*/
+	setTimeout(()=>{},150);/*retardo de 250ms*/
         }
         else if(M > -0.75)
         { 
-	setTimeout(()=>{},250);/*retardo de 250ms*/
+	setTimeout(()=>{},150);/*retardo de 250ms*/
             W = -1;
-	setTimeout(()=>{},250);/*retardo de 250ms*/
+	setTimeout(()=>{},150);/*retardo de 250ms*/
         }
         if(flanco!=W)
         {
 		setTimeout(()=>{},150);/*retardo de 350ms*/
-		if(accelz > -0.25 )
+		var accelz=event.acceleration.z;
+		setTimeout(()=>{},150);/*retardo de 350ms*/
+		if(accelz > -0.45 )
 		{
 			flancoz1=true;
 		}
-		setTimeout(()=>{},150);/*retardo de 350ms*/
-		if(accelz < 0.25 )
+		setTimeout(()=>{},50);/*retardo de 350ms*/
+		if(accelz < 0.45 )
 		{
 			flancoz2=true;
 		}
-		setTimeout(()=>{},150);/*retardo de 350ms*/
-		if(flancoz1===true && flancoz2 ===true)
-		{
+		setTimeout(()=>{},50);/*retardo de 350ms*/
 			contador++;
 			flancoz1=false;
 			flancoz2=false;
-		}
         }
         flanco = W;
         pasos = parseInt(contador/2);
