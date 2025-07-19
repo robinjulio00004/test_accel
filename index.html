@@ -50,7 +50,7 @@
 	const vcamera=20;
 	let cam=document.querySelector('#cameraview');
 	let camrot=cam.object3D.rotation;
-	/*let campost=cam.object3D.position;*/
+	let campost=cam.object3D.position;
 	
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
@@ -97,8 +97,8 @@
 	cam.object3D.position.z=vcamera+pasos;
 	}
 	document.getElementById("out1").innerHTML=accelz.toFixed(4);
-	document.getElementById("out2").innerHTML=camrot.x.toFixed(4);
-	document.getElementById("out3").innerHTML=gyroy.toFixed(4);
+	document.getElementById("out2").innerHTML=campost.z.toFixed(4);
+	document.getElementById("out3").innerHTML=pasos;
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
