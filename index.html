@@ -46,7 +46,7 @@
 </body>
 	<!-- Javascript -->
 <script>
-	let m1=0, m2=0, m3=0, m4=0, m5=0, m6=0, M=0, Ay=0, W=0, flanco=0, pasos=0, contador=0, npost=0;
+	let m1=0, m2=0, m3=0, m4=0, m5=0, m6=0, M=0, Ay=0, W=0, flanco=0, pasos=0,ppasos=0, contador=0, npost=0;
 	const vcamera=20;
 	let cam=document.querySelector('#cameraview');
 	let camrot=cam.object3D.rotation;
@@ -90,12 +90,13 @@
         pasos = parseInt(contador/2);
 	if(accelz > 0.5 )
 	{
-	cam.object3D.position.z=vcamera-pasos;
+	ppasos=-pasos;
 	}
 	else
 	{
-	cam.object3D.position.z=vcamera+pasos;
+	ppasos=+pasos;
 	}
+	cam.object3D.position.z=vcamera+ppasos;
 	document.getElementById("out1").innerHTML=accelz.toFixed(4);
 	document.getElementById("out2").innerHTML=campost.z.toFixed(4);
 	document.getElementById("out3").innerHTML=pasos;
