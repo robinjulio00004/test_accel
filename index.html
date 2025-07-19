@@ -88,16 +88,18 @@
         }
         flanco = W;
         pasos = parseInt(contador/2);
-	if(accelz > 0.5 )
+	/*if(accelz > 0.5 )
 	{
 	ppasos=-pasos;
 	}
 	else
 	{
 	ppasos=+pasos;
-	}
-	cam.object3D.position.z=vcamera+ppasos;
+	}*/
+	/*cam.object3D.position.z=vcamera+ppasos;*/
+		setTimeout(()=>{},500);/*retardo de 350ms*/
 	document.getElementById("out1").innerHTML=accelz.toFixed(4);
+		setTimeout(()=>{},500);/*retardo de 350ms*/
 	document.getElementById("out2").innerHTML=campost.z.toFixed(4);
 	document.getElementById("out3").innerHTML=pasos;
 	});
