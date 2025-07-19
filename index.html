@@ -105,39 +105,27 @@
 		
 	if(Z < 0.45  && Z > -0.45)/*accelz*/
 	{
-		A=B=0;
+		marca1=marca2=0;
 	}
 	else if(Z >= 0.45)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
-		A=1;
-		marca1=Date.now();
-		c1=ctiempo;
+		marca1=ctiempo;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
 	else if(Z<=-0.45)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
-		B=-1;
-		marca2=Date.now();
-		c2=ctiempo;
+		marca2=ctiempo;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
-		if(marca2.valueOf() > marca1.valueOf())
-		{
-			adelante=true;
-			atras=false;
-		}
-		else
-		{
-			atras=true;
-			adelante=false;
-		}
-		resta=c1-c2;
+		/*if(marca2<marca1)*/
+		resta=marca1-marca2;
 	
-	document.getElementById("out1").innerHTML=c1;
-	document.getElementById("out2").innerHTML=c2;
+	document.getElementById("out1").innerHTML=marca1;
+	document.getElementById("out2").innerHTML=marca2;
 	document.getElementById("out4").innerHTML=resta;
+	ctiempo=0;
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
