@@ -112,12 +112,18 @@ if(Z >= 0.45)/*accelz*/
 	document.getElementById("out4").innerHTML=resta;
 
 		/**********************************************/
-        if(flancoy!=W)/*en iPhone se invierte adelante y atrás*/	
+        if(flancoy!=W && resta>0)/*en iPhone se invierte adelante y atrás*/	
         {
 	setTimeout(()=>{},50);/*retardo de 350ms*/
 	contador++;
 	setTimeout(()=>{},50);/*retardo de 350ms*/
         }
+	else
+	{
+	setTimeout(()=>{},50);/*retardo de 350ms*/
+	contador--;
+	setTimeout(()=>{},50);/*retardo de 350ms*/	
+	}
 	flancoy = W;
         pasos = parseInt(contador/2);
 	document.getElementById("out3").innerHTML=pasos;
