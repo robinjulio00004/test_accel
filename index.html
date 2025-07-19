@@ -91,7 +91,7 @@
 			flancoz1=true;
 		setTimeout(()=>{},150);/*retardo de 350ms*/
 		}
-		if(accelz > 0.75 )
+		else if(accelz > 0.75 )
 		{
 			setTimeout(()=>{},150);/*retardo de 350ms*/
 			flancoz2=true;
@@ -102,10 +102,10 @@
 			setTimeout(()=>{},350);/*retardo de 350ms*/
             		contador++;
 			setTimeout(()=>{},350);/*retardo de 350ms*/
-			flanco1=false;
-			flanco2=false;
 		}
 			contador--;
+			flanco1=false;
+			flanco2=false;
 
         }
         flanco = W;
