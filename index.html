@@ -116,16 +116,20 @@
 		mar2=ctiempo;
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
-	setTimeout(()=>{},50);/*retardo de 50ms*/
+	
 	resta=mar1-mar2;
-	setTimeout(()=>{},50);/*retardo de 50ms*/
-		if(resta>33)
+	
+		if(mar1>mar2)
 		{
+		setTimeout(()=>{},50);/*retardo de 50ms*/
 		A=1;
+		setTimeout(()=>{},50);/*retardo de 50ms*/
 		}
-		else if (resta<-33)
+		else if (mar1<mar2)
 		{
+		setTimeout(()=>{},50);/*retardo de 50ms*/
 		A=-1;
+		setTimeout(()=>{},50);/*retardo de 50ms*/
 		}
 	document.getElementById("out1").innerHTML=mar1;
 	document.getElementById("out2").innerHTML=A;
