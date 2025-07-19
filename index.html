@@ -107,9 +107,11 @@ if(Z >= 0.45)/*accelz*/
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
 	resta=mar1-mar2;
+	document.getElementById("out1").innerHTML=mar1;
+	document.getElementById("out2").innerHTML=mar2;
+	document.getElementById("out4").innerHTML=resta;
 
 		/**********************************************/
-		
         if(flancoy!=W)/*en iPhone se invierte adelante y atrás*/	
         {
 	setTimeout(()=>{},50);/*retardo de 350ms*/
@@ -118,11 +120,9 @@ if(Z >= 0.45)/*accelz*/
         }
 	flancoy = W;
         pasos = parseInt(contador/2);
-	/*cam.object3D.position.z=vcamera+ppasos;*/
-	document.getElementById("out1").innerHTML=mar1;
-	document.getElementById("out2").innerHTML=mar2;
 	document.getElementById("out3").innerHTML=pasos;
-	document.getElementById("out4").innerHTML=resta;
+	/*cam.object3D.position.z=vcamera+ppasos;*/
+
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
