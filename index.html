@@ -94,9 +94,12 @@
 			flancoz2=true;
 		}
 		setTimeout(()=>{},150);/*retardo de 350ms*/
+		if(flancoz1===true && flancoz2 ===true)
+		{
 			contador++;
 			flancoz1=false;
 			flancoz2=false;
+		}
         }
         flanco = W;
         pasos = parseInt(contador/2);
