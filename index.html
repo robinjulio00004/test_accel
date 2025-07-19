@@ -33,7 +33,7 @@
 	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 0.5 2" rotation="0 0 0"></a-entity>	
 
 	<!-- Camera -->
-	      	<a-entity id="cameraview" position="0 0 20">
+	      	<a-entity id="cameraview" position="0 0 20" rotation="0 0 0">
 		<a-camera>
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
             	position="0 0 -3"
@@ -88,7 +88,14 @@
         }
         flanco = W;
         pasos = parseInt(contador/2);
+	if(accelz > 0.5 )
+	{
 	cam.object3D.position.z=vcamera-pasos;
+	}
+	else
+	{
+	cam.object3D.position.z=vcamera+pasos;
+	}
 	document.getElementById("out1").innerHTML=accelz.toFixed(4);
 	document.getElementById("out2").innerHTML=camrot.x.toFixed(4);
 	document.getElementById("out3").innerHTML=gyroy.toFixed(4);
