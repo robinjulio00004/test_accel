@@ -82,16 +82,16 @@
         }
         if(flanco!=W)
         {
-	setTimeout(()=>{},150);/*retardo de 350ms*/
+	setTimeout(()=>{},50);/*retardo de 350ms*/
 	var accelz=event.acceleration.z;
-	setTimeout(()=>{},150);/*retardo de 350ms*/
+	setTimeout(()=>{},50);/*retardo de 350ms*/
 		if(accelz > -0.75 )
 		{
 		setTimeout(()=>{},150);/*retardo de 350ms*/
 			flancoz1=true;
 		setTimeout(()=>{},150);/*retardo de 350ms*/
 		}
-		else if(accelz > 0.75 )
+		if(accelz > 0.75 )
 		{
 			setTimeout(()=>{},150);/*retardo de 350ms*/
 			flancoz2=true;
@@ -113,7 +113,7 @@
 
 	/*cam.object3D.position.z=vcamera+ppasos;*/
 	document.getElementById("out1").innerHTML=flancoz1;
-	document.getElementById("out2").innerHTML=campost.z.toFixed(4);
+	document.getElementById("out2").innerHTML=flancoz2;
 	document.getElementById("out3").innerHTML=pasos;
 	});
 	
