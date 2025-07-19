@@ -101,21 +101,21 @@
         }
 	flancoy = W;
 	pasos = parseInt(contador/2);
-	pasos2=pasos;
+	/*pasos2=pasos;*/
 	/**********************************************/
 		
 	if(Z >= 0.45)/*accelz*/
 	{
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 		mar1=ctiempo;
-		pasos2=pasos2+1;
+		pasos2=pasos;
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
 	else if(Z<=-0.45)
 	{
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 		mar2=ctiempo;
-		pasos2=pasos2-1;
+		pasos2=pasos-1;
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
 	
