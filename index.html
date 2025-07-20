@@ -93,10 +93,6 @@
 	setTimeout(()=>{},50);/*retardo de 250ms*/
         }
 
-	if(flancoy!=W)/*en iPhone se invierte adelante y atrás*/	
-        {
-	setTimeout(()=>{},150);/*retardo de 150ms*/
-	/*contador++;*/
 	/**********************************************/
 	if(Z >= 0.25)/*accelz0.45*/
 	{
@@ -110,34 +106,25 @@
 		/*setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
 	/**********************************************/
+
+	if(flancoy!=W)/*en iPhone se invierte adelante y atrás*/	
+        {
+	setTimeout(()=>{},150);/*retardo de 150ms*/
+	contador++;
 	setTimeout(()=>{},150);/*retardo de 150ms*/
         }
 	flancoy = W;
 	pasos = parseInt(contador/2);
-
-	resta=mar1-mar2;
-	setTimeout(()=>{},250);/*retardo de 50ms*/
-		if(mar1>mar2)
-		{
+	document.getElementById("out3").innerHTML=pasos;
+	/*cam.object3D.position.z=vcamera+ppasos;*/
 		
-		A=1;
-		
-		}
-	setTimeout(()=>{},250);/*retardo de 50ms*/
-		if (mar1<mar2)
-		{
-		
-		A=-1;
-		
-		}
 	document.getElementById("out1").innerHTML=contador;
-	document.getElementById("out2").innerHTML=pasos;
-	document.getElementById("out4").innerHTML=resta;
+	document.getElementById("out2").innerHTML=flancoy;
+	document.getElementById("out4").innerHTML=W;
 
 		/**********************************************/
 
-	document.getElementById("out3").innerHTML=pasos;
-	/*cam.object3D.position.z=vcamera+ppasos;*/
+
 
 	});
 	
