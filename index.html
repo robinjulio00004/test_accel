@@ -97,17 +97,19 @@
 	/**********************************************/
 	if(Z > 0.45)/*accelz0.45*/
 	{
-		setTimeout(()=>{},50);/*retardo de 250ms*/
+		setTimeout(()=>{},250);/*retardo de 250ms*/
+		if(Z > 0.48)
+		{
 		mar1=Date.now();
-		
-		setTimeout(()=>{},50);/*retardo de 250ms*/
+		}
+		setTimeout(()=>{},250);/*retardo de 250ms*/
 	}
 	else if(Z < -0.45)
 	{
-		setTimeout(()=>{},50);/*retardo de 250ms*/
+		setTimeout(()=>{},150);/*retardo de 250ms*/
 		mar2=Date.now();
 		
-		setTimeout(()=>{},50);/*retardo de 250ms*/
+		setTimeout(()=>{},150);/*retardo de 250ms*/
 		/*setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
 		/*setTimeout(()=>{},150);/*retardo de 150ms*/
