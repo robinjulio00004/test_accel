@@ -94,14 +94,14 @@
         }
 
 	/**********************************************/
-	if(Z > 0.43)/*accelz0.45*/
+	if(Z > 0.45 && Z <1.0 )/*accelz0.45*/
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar1=ctiempo;
 		A=1;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
-	else if(Z < -0.33)
+	else if(Z < -0.45 && Z > -1.0)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar2=ctiempo;
@@ -132,7 +132,7 @@
 		
 	document.getElementById("out2").innerHTML=Z.toFixed(4);
 	document.getElementById("out3").innerHTML=flancoz;
-	document.getElementById("out4").innerHTML=A;
+	document.getElementById("out4").innerHTML=contador2;
 
 		/**********************************************/
 
