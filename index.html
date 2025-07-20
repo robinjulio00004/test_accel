@@ -94,14 +94,14 @@
         }
 
 	/**********************************************/
-	if(Z > 0.45 && Z <1.0 )/*accelz0.45*/
+	if(Z > 0.45 && Z>0.7)/*accelz0.45*/
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar1=ctiempo;
 		A=1;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
-	else if(Z < -0.45 && Z > -1.0)
+	else if(Z < -0.45 && Z<-0.7)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar2=ctiempo;
@@ -113,7 +113,7 @@
 	if(flancoz!=A)/*en iPhone se invierte adelante y atrás*/	
         {
 	setTimeout(()=>{},150);/*retardo de 150ms*/
-	contador2--;
+	contador2++;
 	setTimeout(()=>{},150);/*retardo de 150ms*/
         }
 	flancoz = A;
