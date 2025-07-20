@@ -98,12 +98,14 @@
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar1=ctiempo;
+		A=1;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
 	else if(Z < -0.33)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar2=ctiempo;
+		A=-1;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		/*setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
@@ -129,8 +131,8 @@
 	/*cam.object3D.position.z=vcamera+ppasos;*/
 		
 	document.getElementById("out2").innerHTML=Z.toFixed(4);
-	document.getElementById("out3").innerHTML=mar1;
-	document.getElementById("out4").innerHTML=mar2;
+	document.getElementById("out3").innerHTML=flancoz;
+	document.getElementById("out4").innerHTML=A;
 
 		/**********************************************/
 
