@@ -98,15 +98,15 @@
 	if(Z > 0.45)/*accelz0.45*/
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
-		mar1=ctiempo;
-		ctiempo=0;
+		mar1=Date.now();
+		
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
 	else if(Z < -0.45)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
-		mar2=ctiempo;
-		ctiempo=0;
+		mar2=Date.now();
+		
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		/*setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
@@ -127,8 +127,8 @@
 	document.getElementById("out1").innerHTML=pasos;
 	/*cam.object3D.position.z=vcamera+ppasos;*/
 		
-	document.getElementById("out2").innerHTML=mar1;
-	document.getElementById("out3").innerHTML=mar2;
+	document.getElementById("out2").innerHTML=mar1.toFixed(4);
+	document.getElementById("out3").innerHTML=mar2.toFixed(4);
 	document.getElementById("out4").innerHTML=resta;
 
 		/**********************************************/
