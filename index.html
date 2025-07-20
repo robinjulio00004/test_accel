@@ -94,13 +94,17 @@
         }
 
 	/**********************************************/
-	if(Z >= 0.25)/*accelz0.45*/
+	if(Z > 0.43)/*accelz0.45*/
 	{
+		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar1=ctiempo;
+		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
-	else if(Z<=-0.25)
+	else if(Z < -0.33)
 	{
+		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar2=ctiempo;
+		setTimeout(()=>{},50);/*retardo de 250ms*/
 		/*setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
 	/**********************************************/
