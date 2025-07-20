@@ -49,6 +49,7 @@
 <script>
 	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0,pasos2=0, contador=0, npost=0,resta;
 	let z1=0, z2=0, z3=0, z4=0, z5=0, z6=0, Z=0, Az=0, A=0, flancoz=0, contador2=0;
+	let r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, Rr=0, R=0;
 	let ctiempo=0, mar1=0,mar2=0;
 	const vcamera=20;
 	let cam=document.querySelector('#cameraview');
@@ -98,32 +99,27 @@
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar1=ctiempo;
-		A=1;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
 	else if(Z < -0.45 && Z<-0.7)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar2=ctiempo;
-		A=-1;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		/*setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
 		setTimeout(()=>{},150);/*retardo de 150ms*/
 		resta=mar1-mar2;
 		setTimeout(()=>{},150);/*retardo de 150ms*/
-	if(resta>5)
-	{
-		setTimeout(()=>{},150);/*retardo de 150ms*/
-		contador2=10;
-		setTimeout(()=>{},150);/*retardo de 150ms*/
-	}else if(resta<5)
-	{
-		setTimeout(()=>{},150);/*retardo de 150ms*/
-		contador2=-10;
-		setTimeout(()=>{},150);/*retardo de 150ms*/
-	}
-		
+
+		Rr = resta;
+		r1 = Rr;
+		r2 = r1;
+		r3 = r2;
+		r4 = r3;
+		r5 = r4;
+		r6 = r5; 
+	R = (r1 / 6) + (r2 / 6) + (r3 / 6) + (r4 / 6) + (r5 / 6) + (r6 / 6);/*promediador y*/
 	/**********************************************/
 
 	if(flancoy!=W)/*en iPhone se invierte adelante y atrás*/	
@@ -139,7 +135,7 @@
 		
 	document.getElementById("out2").innerHTML=mar1;
 	document.getElementById("out3").innerHTML=mar2;
-	document.getElementById("out4").innerHTML=contador2;
+	document.getElementById("out4").innerHTML=R;
 
 		/**********************************************/
 
