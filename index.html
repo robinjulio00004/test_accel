@@ -47,8 +47,8 @@
 </body>
 	<!-- Javascript -->
 <script>
-	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0,pasos2=0, contador=0, npost=0,resta,A=0;
-	let z1=0, z2=0, z3=0, z4=0, z5=0, z6=0, Z=0, Az=0;
+	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0,pasos2=0, contador=0, npost=0,resta;
+	let z1=0, z2=0, z3=0, z4=0, z5=0, z6=0, Z=0, Az=0, A=0, flancoz=0, contador2=0;
 	let ctiempo=0, mar1=0,mar2=0;
 	const vcamera=20;
 	let cam=document.querySelector('#cameraview');
@@ -107,6 +107,14 @@
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		/*setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
+		
+	if(flancoz!=A)/*en iPhone se invierte adelante y atrás*/	
+        {
+	setTimeout(()=>{},150);/*retardo de 150ms*/
+	contador2--;
+	setTimeout(()=>{},150);/*retardo de 150ms*/
+        }
+	flancoz = A;
 	/**********************************************/
 
 	if(flancoy!=W)/*en iPhone se invierte adelante y atrás*/	
