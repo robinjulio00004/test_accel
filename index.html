@@ -95,30 +95,30 @@
 
 	if(flancoy!=W)/*en iPhone se invierte adelante y atrás*/	
         {
-	setTimeout(()=>{},150);/*retardo de 350ms*/
-	contador++;
-	setTimeout(()=>{},150);/*retardo de 350ms*/
-        }
-	flancoy = W;
-	pasos = parseInt(contador/2);
-	/*pasos2=pasos;*/
+	setTimeout(()=>{},100);/*retardo de 100ms*/
+	/*contador++;*/
 	/**********************************************/
-		
 	if(Z >= 0.45)/*accelz*/
 	{
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 		mar1=ctiempo;
-		pasos2=pasos;
+		contador++;
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
 	else if(Z<=-0.45)
 	{
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 		mar2=ctiempo;
-		pasos2=pasos-1;
+		contador--;
 		setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
-	
+	/**********************************************/
+	setTimeout(()=>{},100);/*retardo de 100ms*/
+        }
+	flancoy = W;
+	pasos = parseInt(contador/2);
+
+		
 	resta=mar1-mar2;
 	setTimeout(()=>{},250);/*retardo de 50ms*/
 		if(mar1>mar2)
@@ -134,8 +134,8 @@
 		A=-1;
 		
 		}
-	document.getElementById("out1").innerHTML=mar1;
-	document.getElementById("out2").innerHTML=pasos2;
+	document.getElementById("out1").innerHTML=contador;
+	document.getElementById("out2").innerHTML=pasos;
 	document.getElementById("out4").innerHTML=resta;
 
 		/**********************************************/
