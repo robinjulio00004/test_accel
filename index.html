@@ -95,16 +95,18 @@
         }
 
 	/**********************************************/
-	if(Z > 0.45 && Z < 0.8)/*accelz0.45*/
+	if(Z > 0.45)/*accelz0.45*/
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar1=ctiempo;
+		ctiempo=0;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 	}
-	else if(Z < -0.45 && Z > -0.8)
+	else if(Z < -0.45)
 	{
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		mar2=ctiempo;
+		ctiempo=0;
 		setTimeout(()=>{},50);/*retardo de 250ms*/
 		/*setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
@@ -112,15 +114,6 @@
 		resta=mar1-mar2;
 		/*setTimeout(()=>{},150);/*retardo de 150ms*/
 
-		Rr = resta;
-		r1 = Rr;
-		r2 = r1;
-		r3 = r2;
-		r4 = r3;
-		r5 = r4;
-		r6 = r5; 
-	R = (r1 / 6) + (r2 / 6) + (r3 / 6) + (r4 / 6) + (r5 / 6) + (r6 / 6);/*promediador y*/
-		mayor= Math.max(Rr,r1,r2,r3,r4,r5,r6);
 	/**********************************************/
 
 	if(flancoy!=W)/*en iPhone se invierte adelante y atrás*/	
@@ -135,8 +128,8 @@
 	/*cam.object3D.position.z=vcamera+ppasos;*/
 		
 	document.getElementById("out2").innerHTML=mar1;
-	document.getElementById("out3").innerHTML=mayor;
-	document.getElementById("out4").innerHTML=R;
+	document.getElementById("out3").innerHTML=mar2;
+	document.getElementById("out4").innerHTML=resta;
 
 		/**********************************************/
 
