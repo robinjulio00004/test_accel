@@ -60,7 +60,8 @@
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
 	var accelz=event.acceleration.z;
-	const inicio= Date.now(),fin1,fin2;
+	const inicio= Date.now();
+	const fin1,fin2;
 	ctiempo++;
 	/*var gyrox=event.rotationRate.alpha;
 	var gyroy=event.rotationRate.beta;
@@ -113,7 +114,7 @@
 		/*setTimeout(()=>{},50);/*retardo de 50ms*/
 	}
 		/*setTimeout(()=>{},150);/*retardo de 150ms*/
-		resta=mar1-mar2;
+		/*resta=mar1-mar2;*/
 		/*setTimeout(()=>{},150);/*retardo de 150ms*/
 	fin1=mar1-inicio;
 	fin2=mar2-inicio;
